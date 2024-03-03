@@ -1,37 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Авторизация для Видео</title>
+    <title>Авторизация</title>
 </head>
 <body>
+    <h1>Введите пароль</h1>
+    <input type="password" id="password" placeholder="Вводите пароль">
+    <button onclick="checkPassword()">Войти</button>
 
-<!-- Видео с начальным src -->
-<video id="myVideo" width="320" height="240" controls>
-    <source src="5252214082-1.mp4" type="video/mp4">
-</video>
+    <script>
+        const password = "12345"; // Ваш пароль
 
-<script>
-    // Предопределенный пароль для авторизации
-    var correctPassword = "9999";
+        function checkPassword() {
+            const enteredPassword = document.getElementById("password").value;
 
-    // Функция для проверки пароля и изменения src
-    function authorize() {
-        var enteredPassword = prompt("Введите пароль:");
-
-        if (enteredPassword === correctPassword) {
-            // Пароль верный, меняем src у видео
-            var videoElement = document.getElementById("myVideo");
-        } else {
-            // Пароль неправильный, перенаправляем на главную страницу
-            window.location.href = "index.html";
+            if (enteredPassword === password) {
+                // Переход на страницу с видео
+                window.location.href = "video.html";
+            } else {
+                // Переход на главную страницу
+                window.location.href = "index1.html";
+            }
         }
-    }
-
-    // Вызываем функцию авторизации
-    authorize();
-</script>
-
+    </script>
 </body>
 </html>
