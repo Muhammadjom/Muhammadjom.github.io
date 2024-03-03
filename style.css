@@ -1,5 +1,5 @@
 body {
-    height: 80vh;
+    height: 1000vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: 400px;
 }
 
 #password {
