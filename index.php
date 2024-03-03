@@ -1,21 +1,22 @@
 <?php
-// Предопределенный пароль для авторизации
-$correctPassword = "ваш_пароль";
+$correctPassword = "0000";
 
-// Проверяем, была ли отправлена форма
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Получаем введенный пользователем пароль
     $enteredPassword = $_POST["password"];
 
-    // Проверяем правильность пароля
     if ($enteredPassword === $correctPassword) {
-        // Пароль верный, перенаправляем на видео
-        header("Location: ссылка_на_ваше_видео.mp4");
+        header("Location: https://www.youtube.com/watch?v=ZD-3UEO4BwM&t=107s.mp4");
         exit();
     } else {
         $errorMessage = "Неправильный пароль. Попробуйте еще раз.";
     }
 }
+
+    if (isset($errorMessage)) {
+    echo "<p>$errorMessage</p>";
+}
+        
 ?>
 
 <!DOCTYPE html>
@@ -27,12 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-<?php
-// Выводим сообщение об ошибке, если есть
-if (isset($errorMessage)) {
-    echo "<p>$errorMessage</p>";
-}
-?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <label for="password">Пароль:</label>
