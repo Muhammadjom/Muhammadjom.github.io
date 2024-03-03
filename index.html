@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Авторизация</title>
+    <title>JavaScript Авторизация для Видео</title>
 </head>
 <body>
+
+<!-- Видео с начальным src -->
+<video id="myVideo" width="320" height="240" controls>
+    <source src="document_5188259333233720870.mp4" type="video/mp4">
+</video>
 
 <script>
     // Предопределенный пароль для авторизации
     var correctPassword = "0000";
 
-    // Функция для проверки пароля и перенаправления
+    // Функция для проверки пароля и изменения src
     function authorize() {
         var enteredPassword = prompt("Введите пароль:");
 
         if (enteredPassword === correctPassword) {
-            // Пароль верный, перенаправляем на видео
-            window.location.href = "5252214082-1.mp4";
+            var videoElement = document.getElementById("myVideo");
         } else {
             alert("Неправильный пароль. Попробуйте еще раз.");
+            window.location.href = "#";
         }
     }
 
