@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="video">
+    <div class="video" id="myVideo">
         <video controls autoplay src="document_5188259333233720870.mp4"> </video>
-    </div>
+    </div
+    <script>
+    document.getElementById("myVideo").addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    });
+    </script>
 </body>
 </html>
