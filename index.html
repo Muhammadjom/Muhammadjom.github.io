@@ -14,17 +14,19 @@
 
 <script>
     // Предопределенный пароль для авторизации
-    var correctPassword = "0000";
+    var correctPassword = "9999";
 
     // Функция для проверки пароля и изменения src
     function authorize() {
         var enteredPassword = prompt("Введите пароль:");
 
         if (enteredPassword === correctPassword) {
+            // Пароль верный, меняем src у видео
             var videoElement = document.getElementById("myVideo");
+            videoElement.src = "5252214082-1.mp4";
         } else {
-            alert("Неправильный пароль. Попробуйте еще раз.");
-            window.location.href = "#";
+            // Пароль неправильный, перенаправляем на главную страницу
+            window.location.href = "index.html";
         }
     }
 
