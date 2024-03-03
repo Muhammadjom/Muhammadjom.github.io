@@ -1,4 +1,18 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+}
+
+
 video {
     width: 400px;
     height: 600PX;
+}
+
+h1 {
+    color: red;
 }
